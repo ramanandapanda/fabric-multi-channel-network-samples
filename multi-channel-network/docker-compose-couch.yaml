@@ -25,6 +25,7 @@ services:
       - mcn
 
   peer0.org1.example.com:
+    image: hyperledger/fabric-peer:$IMAGE_TAG
     environment:
       - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
       - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb0:5984
@@ -52,6 +53,7 @@ services:
       - mcn
 
   peer0.org2.example.com:
+    image: hyperledger/fabric-peer:$IMAGE_TAG
     environment:
       - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
       - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb1:5984
@@ -79,6 +81,7 @@ services:
       - mcn
 
   peer0.org3.example.com:
+    image: hyperledger/fabric-peer:$IMAGE_TAG
     environment:
       - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
       - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb2:5984
@@ -106,6 +109,7 @@ services:
       - mcn
 
   peer1.org3.example.com:
+    image: hyperledger/fabric-peer:$IMAGE_TAG
     environment:
       - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
       - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb3:5984
@@ -133,6 +137,7 @@ services:
       - mcn
 
   peer0.org4.example.com:
+    image: hyperledger/fabric-peer:$IMAGE_TAG
     environment:
       - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
       - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb4:5984
