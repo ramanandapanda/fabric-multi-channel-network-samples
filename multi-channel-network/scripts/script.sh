@@ -104,56 +104,56 @@ echo "Updating anchor peers for org3 in ch1..."
 updateAnchorPeers 0 3
 
 ## Install chaincode on peer0.org1 and peer0.org2 and peer0.org3
-echo "Install chaincode on peer0.org1..."
-installChaincode 0 1
-echo "Install chaincode on peer0.org2..."
-installChaincode 0 2
-echo "Install chaincode on peer0.org3..."
-installChaincode 0 3
+# echo "Install chaincode on peer0.org1..."
+# installChaincode 0 1
+# echo "Install chaincode on peer0.org2..."
+# installChaincode 0 2
+# echo "Install chaincode on peer0.org3..."
+# installChaincode 0 3
 
-# Instantiate chaincode on peer0.org1
-echo "Instantiating chaincode on peer0.org1 in ch1..."
-instantiateChaincode 0 1 '{"Args":["init","a","1000","b","2000"]}' "'Org1MSP.peer','Org2MSP.peer','Org3MSP.peer'"
+# # Instantiate chaincode on peer0.org1
+# echo "Instantiating chaincode on peer0.org1 in ch1..."
+# instantiateChaincode 0 1 '{"Args":["init","a","1000","b","2000"]}' "'Org1MSP.peer','Org2MSP.peer','Org3MSP.peer'"
 
-# Query chaincode on peer0.org1
-echo "Querying chaincode on peer0.org1 in ch1..."
-chaincodeQuery 0 1 a 1000
+# # Query chaincode on peer0.org1
+# echo "Querying chaincode on peer0.org1 in ch1..."
+# chaincodeQuery 0 1 a 1000
 
-# Query chaincode on peer0.org2
-echo "Querying chaincode on peer0.org2 in ch1..."
-chaincodeQuery 0 2 a 1000
+# # Query chaincode on peer0.org2
+# echo "Querying chaincode on peer0.org2 in ch1..."
+# chaincodeQuery 0 2 a 1000
 
-# Query chaincode on peer0.org3
-echo "Querying chaincode on peer0.org3 in ch1..."
-chaincodeQuery 0 3 a 1000
+# # Query chaincode on peer0.org3
+# echo "Querying chaincode on peer0.org3 in ch1..."
+# chaincodeQuery 0 3 a 1000
 
-# Invoke chaincode on peer0.org1 and peer0.org2 peer0.org3
-echo "Sending invoke transaction on peer0.org1 peer0.org2 peer0.org3 in ch1..."
-chaincodeInvoke 0 1 0 2 0 3
+# # Invoke chaincode on peer0.org1 and peer0.org2 peer0.org3
+# echo "Sending invoke transaction on peer0.org1 peer0.org2 peer0.org3 in ch1..."
+# chaincodeInvoke 0 1 0 2 0 3
 
-# Query on chaincode on peer0.org1, check if the result is 90
-echo "Querying chaincode on peer0.org1 in ch1..."
-chaincodeQuery 0 1 a 990
+# # Query on chaincode on peer0.org1, check if the result is 90
+# echo "Querying chaincode on peer0.org1 in ch1..."
+# chaincodeQuery 0 1 a 990
 
-# Query on chaincode on peer0.org2, check if the result is 90
-echo "Querying chaincode on peer0.org2 in ch1..."
-chaincodeQuery 0 2 a 990
+# # Query on chaincode on peer0.org2, check if the result is 90
+# echo "Querying chaincode on peer0.org2 in ch1..."
+# chaincodeQuery 0 2 a 990
 
-# Query on chaincode on peer0.org3, check if the result is 90
-echo "Querying chaincode on peer0.org3 in ch1..."
-chaincodeQuery 0 3 a 990
+# # Query on chaincode on peer0.org3, check if the result is 90
+# echo "Querying chaincode on peer0.org3 in ch1..."
+# chaincodeQuery 0 3 a 990
 
-# Query on chaincode on peer0.org1, check if the result is 90
-echo "Querying chaincode on peer0.org1 in ch1..."
-chaincodeQuery 0 1 b 2010
+# # Query on chaincode on peer0.org1, check if the result is 90
+# echo "Querying chaincode on peer0.org1 in ch1..."
+# chaincodeQuery 0 1 b 2010
 
-# Query on chaincode on peer0.org2, check if the result is 90
-echo "Querying chaincode on peer0.org2 in ch1..."
-chaincodeQuery 0 2 b 2010
+# # Query on chaincode on peer0.org2, check if the result is 90
+# echo "Querying chaincode on peer0.org2 in ch1..."
+# chaincodeQuery 0 2 b 2010
 
-# Query on chaincode on peer0.org3, check if the result is 90
-echo "Querying chaincode on peer0.org3 in ch1..."
-chaincodeQuery 0 3 b 2010
+# # Query on chaincode on peer0.org3, check if the result is 90
+# echo "Querying chaincode on peer0.org3 in ch1..."
+# chaincodeQuery 0 3 b 2010
 
 echo
 echo "#########################"
@@ -178,43 +178,43 @@ updateAnchorPeers 1 3
 echo "Updating anchor peers for org4 in ch2.."
 updateAnchorPeers 0 4
 
-## Install chaincode on peer1.org3 and peer0.org4
-echo "Install chaincode on peer1.org3..."
-installChaincode 1 3
-echo "Install chaincode on peer0.org4..."
-installChaincode 0 4
+# ## Install chaincode on peer1.org3 and peer0.org4
+# echo "Install chaincode on peer1.org3..."
+# installChaincode 1 3
+# echo "Install chaincode on peer0.org4..."
+# installChaincode 0 4
 
-# Instantiate chaincode on peer0.org3
-echo "Instantiating chaincode on peer1.org3 in ch2..."
-instantiateChaincode 1 3 '{"Args":["init","a","100","b","200"]}' "'Org3MSP.peer','Org4MSP.peer'"
+# # Instantiate chaincode on peer0.org3
+# echo "Instantiating chaincode on peer1.org3 in ch2..."
+# instantiateChaincode 1 3 '{"Args":["init","a","100","b","200"]}' "'Org3MSP.peer','Org4MSP.peer'"
 
-# Query chaincode on peer1.org3
-echo "Querying chaincode on peer1.org3 in ch2..."
-chaincodeQuery 1 3 a 100
+# # Query chaincode on peer1.org3
+# echo "Querying chaincode on peer1.org3 in ch2..."
+# chaincodeQuery 1 3 a 100
 
-# Query chaincode on peer0.org4
-echo "Querying chaincode on peer0.org4 in ch2..."``
-chaincodeQuery 0 4 a 100
+# # Query chaincode on peer0.org4
+# echo "Querying chaincode on peer0.org4 in ch2..."``
+# chaincodeQuery 0 4 a 100
 
-# Invoke chaincode on peer1.org3 and peer0.org4
-echo "Sending invoke transaction on peer1.org3 peer0.org4 in ch2..."
-chaincodeInvoke 1 3 0 4
+# # Invoke chaincode on peer1.org3 and peer0.org4
+# echo "Sending invoke transaction on peer1.org3 peer0.org4 in ch2..."
+# chaincodeInvoke 1 3 0 4
 
-# Query on chaincode on peer1.org3, check if the result a is 90
-echo "Querying chaincode on peer1.org3 in ch2..."
-chaincodeQuery 1 3 a 90
+# # Query on chaincode on peer1.org3, check if the result a is 90
+# echo "Querying chaincode on peer1.org3 in ch2..."
+# chaincodeQuery 1 3 a 90
 
-# Query on chaincode on peer0.org4, check if the result a is 90
-echo "Querying chaincode on peer0.org4 in ch2..."
-chaincodeQuery 0 4 a 90
+# # Query on chaincode on peer0.org4, check if the result a is 90
+# echo "Querying chaincode on peer0.org4 in ch2..."
+# chaincodeQuery 0 4 a 90
 
-# Query on chaincode on peer1.org3, check if the result b is 210
-echo "Querying chaincode on peer0.org4 in ch2..."
-chaincodeQuery 1 3 b 210
+# # Query on chaincode on peer1.org3, check if the result b is 210
+# echo "Querying chaincode on peer0.org4 in ch2..."
+# chaincodeQuery 1 3 b 210
 
-# Query on chaincode on peer0.org4, check if the result b is 210
-echo "Querying chaincode on peer0.org4 in ch2..."
-chaincodeQuery 0 4 b 210
+# # Query on chaincode on peer0.org4, check if the result b is 210
+# echo "Querying chaincode on peer0.org4 in ch2..."
+# chaincodeQuery 0 4 b 210
 
 
 echo
